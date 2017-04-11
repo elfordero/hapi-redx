@@ -1,0 +1,36 @@
+{
+    "name": "hapi-redx",
+    "description": "Red X test, hapi edition",
+    "version": "1.0.0",
+    "main": "server.js",
+    "scripts": {
+        "start": "node src/server.js",
+        "test": "mocha src/lib/test",
+        "predeploy:cf": "cf t -o \"\" -s \"\"",
+        "deploy:cf": "cf push -f manifests/manifest-test.yml -p ."
+      },
+    "keywords": ["Node API"],
+    "engines": {
+        "node": "6.x.x"
+    },
+    "dependencies": {
+        "app-root-path": "^2.0.1",
+        "boom": "^4.2.0",
+        
+        "hapi": "^16.1.0",
+        "hapi-accept-language": "^1.0.1",
+        "hapi-swagger": "^7.6.0",
+        "inert": "^4.1.0",
+        "joi": "^10.2.2",
+        "merge": "^1.2.0",
+        "object-mapper": "^3.0.1",
+        "request": "^2.79.0",
+        "pino": "^2.12.4",
+        "vision": "^4.0.1"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        
+        "mocha": "^3.2.0"
+    }
+}
